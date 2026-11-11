@@ -1,0 +1,47 @@
+﻿model,n_trials,search_val_F1,hyperparameter,search_range,selected
+Random Forest,30,0.9633,n_estimators,100–300 (adım 50),200
+Random Forest,30,0.9633,max_depth,10–40,21
+Random Forest,30,0.9633,min_samples_leaf,1–20 (log),2
+Random Forest,30,0.9633,max_features,"sqrt, log2, 0,3, 0,5","0,3"
+Random Forest,30,0.9633,max_samples (ağaç başına kayıt),200.000–1.000.000 (adım 100.000),900.000
+Random Forest,30,0.9633,criterion,"gini, entropy",gini
+Random Forest,30,0.9633,class_weight,"yok, balanced_subsample",yok
+XGBoost,30,0.9623,learning_rate,"0,01–0,3 (log)","0,0275"
+XGBoost,30,0.9623,max_depth,3–12,9
+XGBoost,30,0.9623,min_child_weight,1–100 (log),"1,63"
+XGBoost,30,0.9623,subsample,"0,5–1","0,563"
+XGBoost,30,0.9623,colsample_bytree,"0,4–1","0,684"
+XGBoost,30,0.9623,gamma,1e-8–5 (log),"1,10e-3"
+XGBoost,30,0.9623,reg_alpha,1e-8–10 (log),"5,87e-2"
+XGBoost,30,0.9623,reg_lambda,1e-8–10 (log),"7,97e-7"
+XGBoost,30,0.9623,scale_pos_weight,1–10 (log),"2,27"
+LightGBM,30,0.9632,learning_rate,"0,01–0,3 (log)","0,0221"
+LightGBM,30,0.9632,num_leaves,15–511 (log),86
+LightGBM,30,0.9632,min_child_samples,5–500 (log),13
+LightGBM,30,0.9632,subsample,"0,5–1","0,614"
+LightGBM,30,0.9632,colsample_bytree,"0,4–1","0,653"
+LightGBM,30,0.9632,reg_alpha,1e-8–10 (log),"1,19e-4"
+LightGBM,30,0.9632,reg_lambda,1e-8–10 (log),"3,98e-4"
+LightGBM,30,0.9632,scale_pos_weight,1–10 (log),"3,83"
+CatBoost,30,0.9625,learning_rate,"0,01–0,3 (log)","0,0828"
+CatBoost,30,0.9625,depth,4–10,9
+CatBoost,30,0.9625,l2_leaf_reg,1–30 (log),"5,04"
+CatBoost,30,0.9625,random_strength,"0,1–10 (log)","2,13"
+CatBoost,30,0.9625,bagging_temperature,0–1,"0,466"
+CatBoost,30,0.9625,scale_pos_weight,1–10 (log),"1,05"
+Autoencoder,51,0.6075,"n_layers (kodlayıcı, simetrik çözücü)",1–3,2
+Autoencoder,51,0.6075,width (ilk gizli katman; sonrakiler yarıya iner),32–256 (log),206
+Autoencoder,51,0.6075,bottleneck,4–32 (log),22
+Autoencoder,51,0.6075,lr (Adam),1e-4–3e-3 (log),"5,35e-4"
+Autoencoder,51,0.6075,batch_size,"1.024, 4.096, 16.384",1.024
+Autoencoder,51,0.6075,weight_decay,1e-8–1e-3 (log),"8,63e-8"
+Isolation Forest,50,0.4177,n_estimators,100–500 (adım 50),100
+Isolation Forest,50,0.4177,max_samples (ağaç başına kayıt),256–16.384 (log),8.105
+Isolation Forest,50,0.4177,max_features,"0,5–1","0,902"
+Isolation Forest,50,0.4177,bootstrap,"hayır, evet",evet
+"OCSVM, Nyström",57,0.5117,gamma (RBF),"0,01–30 (log)","15,78"
+"OCSVM, Nyström",57,0.5117,n_components,500–1.500 (adım 250),1.250
+"OCSVM, Nyström",57,0.5117,nu,"0,001–0,3 (log)","0,142"
+K-Means,40,0.5181,n_clusters,2–256 (log),134
+K-Means,40,0.5181,batch_size,"4.096, 16.384, 65.536",65.536
+K-Means,40,0.5181,init,"k-means++, random",k-means++
